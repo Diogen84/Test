@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'questrial';
+  src: url('../fonts/questrial-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-questrial : 'questrial', arial, helvetica, sans-serif;
+$font-basic: arial, helvetica, sans-serif;
+$background-color:#f0f0f0;
+$main-color:#333;
+$shadow: 26px 26px 72px 0 rgba(1, 1 , 1, .53);
+$color-blue: #3e69f6;
+$color-paper: #fff;
+$background-header: #181a1e;
+
+@import 'reset';
+@import 'zselect';
+@import 'styles';
+@import 'components/header';
+@import 'tab-themes/theme1/tabs';
+@import 'tab-themes/theme2/tabs';

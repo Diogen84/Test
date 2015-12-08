@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/roboto-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+$font-roboto : 'roboto', arial, helvetica, sans-serif;
+$background-input: #f8f8f8;
+.tab1 {
+  padding:0 0 0 9px;
+  label { display:none; }
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"] {
+      background:$background-input;
+      border-radius:4px;
+      border:none;
+      color:#a6a6ad;
+      font:22px/30px $font-roboto;
+      padding:22px 50px 27px;
+      margin:0;
+      width:100%;
+      box-shadow:1px 1px 4px 0 rgba(0, 0, 0, .15);
+      transition:box-shadow .3s ease-out;
+  }
+  label { display:none; }
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus {
+      box-shadow:1px 1px 4px 0 rgba(0, 0, 0, .75);
+  }
+  input[type="text"]::-webkit-input-placeholder,
+  input[type="password"]::-webkit-input-placeholder,
+  input[type="email"]::-webkit-input-placeholder,
+  input[type="number"]::-webkit-input-placeholder { color:#a6a6ad; }
+  input[type="text"]:-moz-placeholder,
+  input[type="password"]:-moz-placeholder,
+  input[type="email"]:-moz-placeholder,
+  input[type="number"]:-moz-placeholder { color: #a6a6ad; }
+  input[type="text"]::-moz-placeholder,
+  input[type="password"]::-moz-placeholder,
+  input[type="email"]::-moz-placeholder,
+  input[type="number"]::-moz-placeholder { color: #a6a6ad; }
+  input[type="text"]:-ms-input-placeholder,
+  input[type="password"]:-ms-input-placeholder,
+  input[type="email"]:-ms-input-placeholder,
+  input[type="number"]:-ms-input-placeholder { color: #a6a6ad; }
+  input.zip {
+    width:48%;
+    min-width:283px;
+  }
+  input[type="submit"] {
+    background:#84b262;
+    border-radius:4px;
+    box-shadow:1px 1px 4px 0 rgba(0, 0, 0, .15);
+    border:none;
+    cursor:pointer;
+    margin:0;
+    padding:26px 20px 28px;
+    font:19px/20px $font-roboto;
+    color:#fff;
+    letter-spacing:1px;
+    word-spacing:2px;
+    text-transform:uppercase;
+    transition:transform .3s ease-out;
+    min-width:283px;
+    text-align:center;
+  }
+  input[type="submit"]:focus,
+  input[type="submit"]:hover {
+      transform:scale(1.05);
+  }
+  select { width:100%; }
+  .row { margin:0 0 34px; }
+  .zs,
+  .zs.zs-focus:not(.zs-disabled) {
+    box-shadow:none;
+    background:$background-input;
+    border-radius:4px;
+  }
+  .zs:before {
+    position:absolute;
+    right:0;
+    top:-1px;
+    background:#38474f;
+    height:81px;
+    width:75px;
+    content:'';
+    border-radius:0 4px 4px 0;
+  }
+  .zs-text,
+  .zs.zs-placeholder-active .zs-text {
+    background:none;
+    border-radius:4px;
+    border:none;
+    box-shadow:1px 1px 4px 0 rgba(0, 0, 0, .15);
+    transition:box-shadow .3s ease-out;
+    padding:22px 85px 27px 50px;
+    color:#a6a6ad;
+    font:22px/30px $font-roboto;
+  }
+  .zs.zs-focus:not(.zs-disabled) .zs-text { color:#a6a6ad; }
+  .zs.zs-focus .zs-text {
+    box-shadow:1px 1px 4px 0 rgba(0, 0, 0, .75);
+  }
+  .zs-text:after,
+  .zs-btn {
+    border:none;
+    background:url('../img/sprite/sprite.png') no-repeat -117px 0;
+    width:18px;
+    height:17px;
+    transform:rotate(0);
+    right:28px;
+    margin-top:-5px;
+  }
+  .zs-drop {
+    background:$background-input;
+    box-shadow:1px 1px 4px 0 rgba(0, 0, 0, .15);
+    border:none;
+  }
+  .zs-drop-item,
+  .zs-drop-item.zs-drop-placeholder {
+    color:#a6a6ad;
+    border:none;
+  }
+  .zs-drop-item:hover,
+  .zs-drop-item.zs-active:not(.zs-drop-disabled) {
+    background:#38474f;
+    color:#fff;
+  }
+}
+@media screen and (max-width:1200px) {
+  .tab1 {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    select {
+        font-size:18px;
+        padding:18px 34px;
+    }
+    input[type="submit"] {
+        font-size:18px;
+        padding:18px;
+    }
+    .zs-text,
+    .zs.zs-placeholder-active .zs-text {
+      font-size:18px;
+      padding:18px 34px;
+    }
+    .zs:before {
+      height:68px;
+    }
+  }
+}
+@media screen and (max-width:460px) {
+  .tab1 {
+    input.zip,
+    input[type="submit"] {
+        width:100%;
+    }
+  }
+  .tab.tab1 { padding:0; }
+}

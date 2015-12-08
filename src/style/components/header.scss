@@ -1,0 +1,103 @@
+.header {
+  float:left;
+  width:333px;
+  padding:23px 109px 71px 0;
+  margin:21px -109px 0 0;
+  background:$background-header;
+  box-shadow:$shadow;
+
+  .opener { display:none; }
+  ul {
+    font:20px/1 'questrial', arial, helvetica, sans-serif;
+    text-transform:uppercase;
+  }
+  li {
+    margin:0 0 -2px;
+    position:relative;
+  }
+  ul a {
+    display:block;
+    padding:34px 20px 34px 73px;
+    color:#ccc;
+    background:$background-header;
+    border-left:14px solid $background-header;
+    transition:color .3s ease-out, background-color .3s ease-out, margin .3s ease-out, padding .3s ease-out, border-color .3s ease-out;
+  }
+  ul a:hover,
+  ul .active a {
+    margin:0 -27px 0 -14px;
+    padding:34px 47px 34px 87px;
+    background:#fff;
+    color:#333;
+    position:relative;
+    text-decoration:none;
+    box-shadow:$shadow;
+    z-index:101;
+    border-left:14px solid #fff;
+  }
+  ul .active a {
+    z-index:100;
+    border-left:14px solid $color-blue;
+  }
+}
+@media screen and (min-width:1001px) {
+  .wrapper .header ul {
+    display:block !important;
+  }
+}
+@media screen and (max-width:1000px) {
+  .header {
+    background:$background-header;
+    margin:0;
+    width:100%;
+    position:absolute;
+    z-index:200;
+    top:0;
+    left:0;
+    box-shadow:none;
+    padding:18px 0;
+
+    ul {
+      box-shadow:$shadow;
+      padding:18px 0 0;
+    }
+    li { margin:0; }
+    ul.opened {
+      display:block;
+    }
+    ul .active a { border:none; }
+    ul a,
+    ul .active a,
+    ul a:hover{
+      padding:20px;
+      margin:0;
+      border:none;
+    }
+    .opener {
+      display:block;
+      overflow:hidden;
+      text-indent:-9999px;
+      width:30px;
+      height:30px;
+      position:relative;
+      margin:0 0 0 18px;
+    }
+    .opener span,
+    .opener span:after,
+    .opener span:before {
+      content:'';
+      width:100%;
+      height:4px;
+      position:absolute;
+      top:10px;
+      left:0;
+      background:#fff;
+      border-radius:3px;
+    }
+    .opener span { top:14px; }
+    .opener span:before {
+      bottom:10px;
+      top:auto;
+    }
+  }
+}

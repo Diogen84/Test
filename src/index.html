@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Application</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="wrapper" data-ng-app="App">
+        <div class="wrapper-holder" data-ng-controller="Tabs" data-ng-init="tab=1">
+            <header class="header">
+                <a href="#" class="opener" data-ng-click="toggle()"><span>open</span></a>
+                <ul data-ng-show="tabsBlock">
+                    <li data-ng-class="{ active: isSet(1) }"><a href="#" data-ng-click="setTab(1)">Basics</a></li>
+                    <li data-ng-class="{ active: isSet(2) }"><a href="#" data-ng-click="setTab(2)">Plans</a></li>
+                    <li data-ng-class="{ active: isSet(3) }"><a href="#" data-ng-click="setTab(3)">Account &amp; Billing</a></li>
+                    <li data-ng-class="{ active: isSet(4) }"><a href="#" data-ng-click="setTab(4)">Expansion plans</a></li>
+                    <li data-ng-class="{ active: isSet(5) }"><a href="#" data-ng-click="setTab(5)">Policies</a></li>
+                    <li data-ng-class="{ active: isSet(6) }"><a href="#" data-ng-click="setTab(6)">Small Business</a></li>
+                </ul>
+            </header>
+            <div class="main clearfix">
+                <div class="main-holder">
+                    <div class="main-container">
+                        <div class="tab tab1" data-ng-show="isSet(1)">
+                            <form action="#">
+                                <fieldset>
+                                    <div class="row">
+                                        <label>Full Name</label>
+                                        <input type="text" value="" placeholder="Full Name" />
+                                    </div>
+                                    <div class="row clearfix">
+                                        <label>Country</label>
+                                        <select>
+                                            <option value="0">Select a Country</option>
+                                            <option>Country1</option>
+                                            <option>Country2</option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <label>Postcode/ZIP</label>
+                                        <input type="text" value="" class="zip"  placeholder="Postcode / ZIP" />
+                                    </div>
+                                    <div class="row clearfix">
+                                        <input type="submit" value="Next - your order" />
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="tab tab2" data-ng-show="isSet(2)">
+                            <form action="#">
+                                <fieldset>
+                                    <div class="row">
+                                        <label>City</label>
+                                        <input type="text" value="Mountain View" />
+                                    </div>
+                                    <div class="row clearfix">
+                                        <label>State</label>
+                                        <select>
+                                            <option>CA</option>
+                                            <option>CA</option>
+                                            <option>CA</option>
+                                            <option>CA</option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <label>Postal Code</label>
+                                        <input type="text" value="94043" class="zip" />
+                                    </div>
+                                    <div class="row clearfix">
+                                        <input type="submit" value="Button" />
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="tab tab1" data-ng-show="isSet(3)">
+                            <form action="#">
+                                <fieldset>
+                                    <div class="row">
+                                        <label>Full Name</label>
+                                        <input type="text" value="" placeholder="Full Name" />
+                                    </div>
+                                    <div class="row clearfix">
+                                        <label>Country</label>
+                                        <select>
+                                            <option value="0">Select a Country</option>
+                                            <option>Country1</option>
+                                            <option>Country2</option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <label>Postcode/ZIP</label>
+                                        <input type="text" value="" class="zip"  placeholder="Postcode / ZIP" />
+                                    </div>
+                                    <div class="row clearfix">
+                                        <input type="submit" value="Next - your order" />
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="tab tab2" data-ng-show="isSet(4)">
+                            <form action="#">
+                                <fieldset>
+                                    <div class="row">
+                                        <label>City</label>
+                                        <input type="text" value="Mountain View" />
+                                    </div>
+                                    <div class="row clearfix">
+                                        <label>State</label>
+                                        <select>
+                                            <option>CA</option>
+                                            <option>CA</option>
+                                            <option>CA</option>
+                                            <option>CA</option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <label>Postal Code</label>
+                                        <input type="text" value="94043" class="zip" />
+                                    </div>
+                                    <div class="row clearfix">
+                                        <input type="submit" value="Button" />
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="tab tab1" data-ng-show="isSet(5)">
+                            <form action="#">
+                                <fieldset>
+                                    <div class="row">
+                                        <label>Full Name</label>
+                                        <input type="text" value="" placeholder="Full Name" />
+                                    </div>
+                                    <div class="row clearfix">
+                                        <label>Country</label>
+                                        <select>
+                                            <option value="0">Select a Country</option>
+                                            <option>Country1</option>
+                                            <option>Country2</option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <label>Postcode/ZIP</label>
+                                        <input type="text" value="" class="zip"  placeholder="Postcode / ZIP" />
+                                    </div>
+                                    <div class="row clearfix">
+                                        <input type="submit" value="Next - your order" />
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="tab tab2" data-ng-show="isSet(6)">
+                            <form action="#">
+                                <fieldset>
+                                    <div class="row">
+                                        <label>City</label>
+                                        <input type="text" value="Mountain View" />
+                                    </div>
+                                    <div class="row clearfix">
+                                        <label>State</label>
+                                        <select>
+                                            <option>CA</option>
+                                            <option>CA</option>
+                                            <option>CA</option>
+                                            <option>CA</option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <label>Postal Code</label>
+                                        <input type="text" value="94043" class="zip" />
+                                    </div>
+                                    <div class="row clearfix">
+                                        <input type="submit" value="Button" />
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="sub-nav">
+                        <ul>
+                            <li class="call"><a href="#">Call us</a></li>
+                            <li class="chat"><a href="#">Chat with us</a></li>
+                            <li class="email"><a href="#">Email us</a></li>
+                            <li class="community"><a href="#">Community</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/jquery-1.11.3.min.js"></script>
+    <script src="js/lib/jquery.finger.min.js"></script>
+    <script src="js/lib/jquery.zselect.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
